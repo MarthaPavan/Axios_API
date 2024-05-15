@@ -1,0 +1,29 @@
+{
+  "students": [
+    {
+      "id": "2",
+      "name": "nitin kumar",
+      "dept": "cse"
+    },
+    {
+      "id": "3",
+      "name": "madhukar reddy nallamadha",
+      "dept": "cse"
+    },
+    {
+      "id": "4",
+      "name": "jumbo ",
+      "dept": "cse"
+    },
+    {
+      "id": "1",
+      "name": "sree ram",
+      "dept": "eee"
+    },
+    {
+      "id": "10",
+      "name": "sree ram",
+      "dept": "eee"
+    }
+  ]
+}
