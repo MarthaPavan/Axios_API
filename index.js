@@ -5,7 +5,7 @@ function fetchData()
         console.log(res.data);
         var str = `<html><body><table><tr><th>ID</th><th>Name</th><th>Dept</th><th>Action</th></tr>`;
         res.data.forEach( student =>{
-            str += `<tr><td>${student.id}</td><td>${student.name}</td><td>${student.dept}</td><td><button onclick="updateData()">Edit</button><button onclick="deleteData(${student.id})">Remove</button></td></td></tr>`
+            str += `<tr><td>${student.id}</td><td>${student.name}</td><td>${student.dept}</td><td><button onclick="updateData()">Edit</button><button onclick="removeData(${student.id})">Remove</button></td></td></tr>`
         });
         str += `</body></html>`;
         document.getElementById("result").innerHTML = str;
