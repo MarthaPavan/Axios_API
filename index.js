@@ -10,34 +10,32 @@ function fetchData()
         str += `</body></html>`;
         document.getElementById("result").innerHTML = str;
     });
-}
+};
 function postData()
 {
     var url = "http://localhost:3000/students"
     var id = document.getElementById("id").value;
     var name = document.getElementById("name").value;
     var dept = document.getElementById("dept").value;
-    const obj = 
-    {
+    const obj = {
         id:id,
         name:name,
         dept:dept
-    }
+    };
     axios.post(url, obj).then( res => {
         fetchData();
     });
-}
+};
 deleteData = () =>
 {
     var url = "http://localhost:3000/students/"
     var id = document.getElementById("id").value;
     url += id;
-    axios.delete(url).then(res =>
-        {
+    axios.delete(url).then(res =>{
             fetchData();
         }
     );
-}
+};
 updateData = () =>
 {
     var url = "http://localhost:3000/students/"
@@ -45,22 +43,20 @@ updateData = () =>
     var name = document.getElementById("name").value;
     var dept = document.getElementById("dept").value;
     url += id;
-    const obj = 
-    {
+    const obj = {
         "name":name,
         "dept":dept
     };
     axios.patch(url,obj).then( res =>{
         fetchData();
     });
-}
+};
 function removeData(id)
 {
     var url = "http://localhost:3000/students/"
     url += id;
-    axios.delete(url).then(res =>
-        {
+    axios.delete(url).then(res =>{
             fetchData();
         }
     );
-}
+};
